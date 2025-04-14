@@ -8,6 +8,8 @@ Route::get('/about', [ \App\Http\Controllers\motoren::class, 'index'])->name('ab
 
 Route::get('/projects/add', [ProjectController::class, 'add'])->name('project.add');
 
+Route::get('/projects/index', [ProjectController::class, 'index'])->name('project.index');
+
 Route::get('/detail', [ \App\Http\Controllers\DetailpageController::class, 'index'])->name('detail');
 
 Route::get('/main', [ \App\Http\Controllers\MainpageController::class, 'index'])->name('main');
