@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
 
 Route::get('/about', [ \App\Http\Controllers\motoren::class, 'index'])->name('about');
+
+Route::get('/projects/add', [ProjectController::class, 'add'])->name('project.add');
 
 Route::get('/detail', [ \App\Http\Controllers\DetailpageController::class, 'index'])->name('detail');
 

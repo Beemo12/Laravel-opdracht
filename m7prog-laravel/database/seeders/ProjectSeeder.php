@@ -9,18 +9,18 @@ use Faker\Factory as Faker;
 
 class ProjectSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
-    {
-        $faker = Faker::create();
+
+  public function run(): void{$faker = Faker::create();
 
         DB::table('projects')->insert([
+            'created_at'  => now(),
+            'updated_at'  => now(),
             'title'       => $faker->colorName(),
             'intro'       => $faker->text(50),
-            'description' => $faker->text(),
-            'active'        => true,
+            'description' => $faker->text(100),
+            'active'      => true,
+            'image'       => $faker->imageUrl('https://picsum.photos/200/300'),
+
         ]);
     }
 }
